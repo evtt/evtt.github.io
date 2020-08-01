@@ -2,7 +2,6 @@ function check_keypress()
 {
 	document.onkeydown = function(e)
 	{
-
 		if (window.event.keyCode == 8 // delete key
 			||window.event.keyCode == 48 // number = 0
 			|| window.event.keyCode == 49 // number = 1
@@ -40,6 +39,7 @@ function check_choose_show_answer()
 	{
 		document.getElementById("show_answer").style.display = "none";
 	}
+	document.getElementById("insert_answer").focus();
 }
 
 function generate_number()
