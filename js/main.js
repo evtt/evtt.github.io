@@ -26,6 +26,7 @@ function check_answer()
 		else
 		{
 			alert("Game Over");
+			document.getElementById("answer").value = "";
 			location.reload();
 		}
 	}
