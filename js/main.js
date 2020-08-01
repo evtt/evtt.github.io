@@ -27,7 +27,8 @@ function check_answer()
 		{
 			alert("Game Over");
 			document.getElementById("answer").value = "";
-			location.reload();
+			document.getElementById("question").innerHTML = "1";
+			generate_number();
 		}
 	}
 }
