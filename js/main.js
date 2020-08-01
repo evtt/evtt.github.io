@@ -22,7 +22,24 @@ function check_keypress()
 		{
 			return false;
 		}
-	}	
+	}
+
+	document.onwheel = function(e) // Disable mouse wheel
+	{
+		return false;
+	}
+}
+
+function check_choose_show_answer()
+{
+	if(document.getElementById("choose_show_answer").checked)
+	{
+		document.getElementById("show_answer").style.display = "initial";
+	}
+	else
+	{
+		document.getElementById("show_answer").style.display = "none";
+	}
 }
 
 function generate_number()
@@ -30,14 +47,16 @@ function generate_number()
 	number_01 = Math.floor(Math.random() * 100);
 	number_02 = Math.floor(Math.random() * 100);
 	arrary_number = [number_01, number_02];
-	document.getElementById("calculate").innerHTML = number_01 + " + " + number_02;
+
+	document.getElementById("calculate_formula").innerHTML = number_01 + " + " + number_02;
+	document.getElementById("show_answer").innerHTML = " = " + (Number(number_01) + Number(number_02));
 	return arrary_number;
 }
 
 function check_answer()
 {
 	sum = Number(number_01) + Number(number_02);
-	answer = document.getElementById("answer").value;
+	answer = document.getElementById("insert_answer").value;
 	question = document.getElementById("question").innerHTML;
 
 	if(answer != null
@@ -47,15 +66,16 @@ function check_answer()
 		if(Number(sum) == Number(answer))
 		{
 			document.getElementById("question").innerHTML = (Number(question) + 1).toString();
-			document.getElementById("answer").value = "";
+			document.getElementById("insert_answer").value = "";
 			generate_number();
 		}
 		else
 		{
 			alert("Game Over");
-			document.getElementById("answer").value = "";
+			document.getElementById("insert_answer").value = "";
 			document.getElementById("question").innerHTML = "1";
 			generate_number();
 		}
 	}
 }
+
