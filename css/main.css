@@ -9,7 +9,14 @@ div
 	margin: 0 42%;
 }
 
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button
+{
+	-webkit-appearance: none;
+}
+
+
 input[type="number"]
 {
-
+	-moz-appearance: textfield;
 }

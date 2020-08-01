@@ -3,7 +3,12 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/main.js">
+
+	</script>
+	<noscript>
+		alert("Please ")
+	</noscript>
 </head>
 <body>
 <div>
@@ -12,7 +17,7 @@
 	</h1>
 	<p id="calculate"></p>
 	<br>
-	<input type="number" id="answer" value="" placeholder="Answer" autofocus onkeyup="check_answer()">
+	<input type="number" id="answer" value="" placeholder="Answer" autofocus onkeyup="check_answer()" onkeydown="check_keypress()">
 </div>
 <script type="text/javascript">
 	generate_number();
