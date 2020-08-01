@@ -18,5 +18,6 @@ input::-webkit-outer-spin-button
 
 input[type="number"]
 {
+	pointer-events: none;
 	-moz-appearance: textfield;
 }
