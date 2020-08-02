@@ -5,8 +5,6 @@ function generate_number()
 	
 	document.getElementById("calculate_formula").innerHTML = number_01 + " + " + number_02;
 	document.getElementById("show_answer").innerHTML = " = " + (Number(number_01) + Number(number_02));
-
-	start_timing();
 }
 
 function check_answer()
@@ -33,6 +31,5 @@ function check_answer()
 
 		reset_timing();
 		generate_number();
-
 	}
 }
