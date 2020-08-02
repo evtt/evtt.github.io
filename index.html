@@ -3,9 +3,11 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script type="text/javascript" src="js/main.js">
-		
-	</script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/timer.js"></script>
+	<script type="text/javascript" src="js/button.js"></script>
+	<script type="text/javascript" src="js/keyboard.js"></script>
+	<script type="text/javascript" src="js/number.js"></script>
 	<noscript>
 		alert("Please ");
 	</noscript>
@@ -15,18 +17,18 @@
 	<h1>Question : 
 		<p id="question">1</p>
 	</h1>
+	<p id="show_timer">0</p>
+	<br>
 	<p id="calculate_formula"></p>
 	<p id="show_answer"></p>
 	<br>
-	<input type="number" id="insert_answer" value="" placeholder="Answer" autofocus onkeyup="check_answer()" onkeydown="check_keypress()">
-	
+	<input type="number" id="insert_answer" value="" placeholder="Answer" autofocus onkeyup="check_answer()" onkeydown="limit_keypress()">
 	<hr>
-	<input type="checkbox" id="choose_show_answer" onclick="check_choose_show_answer()"> Show Answer
+	<input type="checkbox" id="choose_show_answer" onclick="choose_show_answer()"> Show Answer
 </div>
 
 <script type="text/javascript">
 	generate_number();
 </script>
-
 </body>
 </html>
